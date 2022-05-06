@@ -1,0 +1,69 @@
+\documentclass[10pt,twocolumn]{article} 
+
+% required packages for Oxy Comps style
+\usepackage{oxycomps} % the main oxycomps style file
+\usepackage{times} % use Times as the default font
+\usepackage[style=numeric,sorting=nyt]{biblatex} % format the bibliography nicely
+
+\usepackage{amsfonts} % provides many math symbols/fonts
+\usepackage{listings} % provides the lstlisting environment
+\usepackage{amssymb} % provides many math symbols/fonts
+\usepackage{graphicx} % allows insertion of grpahics
+\usepackage{hyperref} % creates links within the page and to URLs
+\usepackage{url} % formats URLs properly
+\usepackage{verbatim} % provides the comment environment
+\usepackage{xpatch} % used to patch \textcite
+
+\bibliography{references}
+\DeclareNameAlias{default}{last-first}
+
+\xpatchbibmacro{textcite}
+  {\printnames{labelname}}
+  {\printnames{labelname} (\printfield{year})}
+  {}
+  {}
+
+\pdfinfo{
+    /Title (Writing Your Oxy CS Comps Paper in LaTeX)
+    /Author (Justin Li)
+}
+
+\title{Writing Your Oxy CS Comps Paper in \LaTeX}
+
+\author{Amelia Threatt}
+\affiliation{Occidental College}
+\email{athreatt@oxy.edu}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}
+For my tutorial report I have chosen to follow MDN Web Docs "Learn web development" tutorial that runs through the basics of how to build a website. I chose this specific tutorial because it was marketed as a beginners web development tutorial and along with all the amazing guidance through building a website there was an additional section dedicated to accessibility and making the website usable by everyone. This tutorial contained many sections of information however I only went through the sections on HTML, CSS, JavaScript, Accessibility, and Testing. I chose those specific sections because the website I will be created for my senior comprehensive project will not be working with user data so I skipped that section.This tutorial will go through the various languages needed, software that needs to be downloaded, and the basic recommendations for building a website. This tutorial provides background on each of the steps which is very helpful for a beginner like me. 
+
+\section{Methods}
+The tutorial took me through the three main files needed to make a website, and the languages that go with them. First I was introduced to HTML, the tutorial said to use any text editor so I used the one installed with mac but found that to be a problem later down the line so I changed to another software. After I learned a bit about HTML and the syntax that goes along with it I was taught about the Cascading Style Sheet more commonly referred to as CSS I spent some time playing around with that to familiarize myself with its purpose before moving on. Next I spent most of my time figuring out JavaScript, thankfully it is pretty similar to Java and the tutorial provided a lot of syntax help, so I was able to get some functionality going with my website.
+
+Starting with HTML I was using the Mac text editor simply because it was the first text editor that came to mind when the tutorial said to open up a file. However I quickly found after attempting to insert an image in the text editor that Mac OS does not have the most useful text editor. Thankfully the tutorial provided documentation on all the different software to download so I went ahead and downloaded Visual Studio Code because it had seemed like the most versatile. So, now that I have a text editor that works I went ahead and tried to insert an image to my website by following the tutorial. Then I spent some time learning about the different header styles to use, and created a sequence of sub headers. From my understanding the HTML file is sued for the hard information of the website such as the document type, the title that appears in the web browser and more or less the general idea of different elements that will be included such as the body of the website for example. 
+
+HTML alone produces a very sterile looking website, CSS is where more of the designing aspects come into play. CSS essentially takes the main elements outlined in the HTML files and outlines the design elements that go along with it. Such as the size of font or the color, and all the other properties that can be customized with the property value. Something helpful the tutorial instructed me to do before getting into any coding was to know what I want the website to look like so I got to choose the images I would want in the website, and the font, a few colors I wanted represented all beforehand so I could save time while coding by staying focused. Since my website for my comprehensive project is centered around math I found an image of a person drawn using math symbols and numbers, I chose a pink, teal, and orange from the google provided color picker for my color scheme, and lastly I copied the HTML code for the font of my licking from google's front library. In my CSS file I created a general formatting for all of my HTML information such as the color I wanted the text to be, the size, and the color. Then I created declaration for my image selector and set the width of all my images to 300 pixels. Then I designed the body of my file setting the width margins, background color, how large I wanted the padding which refers to the space around bodies of text, and lastly the color I wanted for the border. Then I did the similar process for my first header. After completing my CSS file my website instantly had so much more life, I can see how this file will be very important for the user interface aspect of my future website. 
+
+Lastly I worked to implement some JavaScript into my website to give it some sort of functionality. The tutorial walked through how to change an image by clicking on it so I followed those instructions and made a GIF appear when the user clicked on the image. Secondly the tutorial went through how to take in a user name and update it to the website. I took this idea and I wanted to apply a mathematical twist so that I could get familiar with some of the coding that I might be doing for the overall comprehensive project. So I changed the input to be a series of numbers added together. The website takes the user input as a string so I attempted to use the eval(); function in JavaScript which ultimately failed. Which happened to be beneficial because upon further reading I learned that using the eval(); function is not recommended due to some security issues. So I went on to find how to make a parser in JavaScript so I could isolate the numbers from the addition signs. A blog post on medium.com shared that the split(); function divides the string into an array of strings of the words separate from the addition signs. Then I used the map(); method to take the array of strings and convert it to an array of integers. Lastly I used the reduce method to add up all the integers from the user input and stored it in a new variable that I would use to print later on when prompted. After all of that I followed the tutorial for the general if else sequences to check if the user has inputted something new, and ended up with a website that can take in a mathematical input and compute it. 
+
+\section{Evaluation}
+To evaluate my website I have chosen to focus on the three main aspects of assessing a website. Which are: Is it usable? Does it succeed in its goal? Lastly, does it work? However before that I think it is worth it to examine some of the flaws in the individual files of the website. Each of these sections of the website can be improved individually to ultimately benefit the overall website. Since this was such a rough draft of a website there are still a lot of aspects missing. The HTML file can be improved by adding in more elements relevant to the user such as an instructional guide of how some of the functions of the website work. The CSS file could be improved by creating a more cohesive presentation to the user. The JavaScript file could be improved by evolving to being able to take in multi-operational problems and solving the appropriately,. 
+
+Before diving into each individual sections I think it is worth it to ask the general questions used to evaluate a website. Is it usable? Does it succeed in its goal? Lastly, does it work? I would argue this website is not very usable, there is not instructions on what the features of this website is or how to use them. Especially for the user input, it only works for addition but that is not very clearly stated to the user to understand thus not making it completely usable. As for the second part of evaluation of a website I do think it succeeds in its goal. The goal was to follow a tutorial and make a website, after following the tutorial I have created a website thus achieving the goal. Lastly does it work, well there are only two functions to this website and both appear to be working. The math input is able to produce the sum of any numbers inputted, and when you click on the image it turns into a new GIF and vice versa. 
+
+
+\section{Results and Discussion}
+After completing this tutorial, I did produce an end result. It is not the most aesthetically pleasing result however I used this tutorial as a chance to test some features I wanted to know more about. Despite some of my exploring there still remain ways in which all three files can be improved to create a better website, and more engaging learning experience for me.
+
+Now to asses the individual files, starting with the HTML file. There is not a lot happening in this file, and most of it gets changed in the JavaScript file. However I could have put together a story of some sort to see what bodies of text look like displayed, I could have worked to include some sort of mathematical formula to see how that can be implemented in HTML. There are a lot of ways in which I could have further developed this section of the website. However aside from that I feel like the tutorial did provide a helpful guidance on the purpose of the HTML file and the general basics of how it works and its syntax.  
+
+The CSS section of the website could definitely be improved. It looks like I just put everything in random colors, and that is sort of what happened. However in the future I could see myself wanting to work more with the spacing, and implementing additional design elements for future user inputs. This is the one section of the tutorial where I did not go off on my own and attempt to develop my own selectors and declarations. Therefore this part of the website is lacking creativity and ingenuity. 
+
+Lastly the Java Script file, this is the part of the tutorial where I went off on my own and tried to apply what I had been taught so far. I learned that this would really be the body of the website, this is where the websites functionality and purpose come to fruition so I felt the desire to explore more so there. I feel like a lot of the functions I gave the website appeared to work. But if I were to give a user the website as it is now I am not confident they would know how to use it. Despite that I also feel like there is a lot of room to grow in some of the functions of the website such as the mathematical computation section. As of now this function can only produce the sum of a set of numbers, I think it would be worth it to take this concept and evolve it to multi operational equations, and then eventually to algebraic equations. These developments would be incredibly useful in the beginning stages of the comprehensive project designs. However even though the addition function is rather rudimentary I did learn the scope of performing computations in JavaScript.
+
+All in all I believe the tutorial seceded in providing me with enough background of front end web development to be able to go off on my own and start figuring out some more of the nuances in web development. 
+
+\end{document}
